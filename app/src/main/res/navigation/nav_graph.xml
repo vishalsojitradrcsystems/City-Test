@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ph"
+        app:startDestination="@id/fragment_city">
+
+    <fragment
+            android:id="@+id/fragment_city"
+            android:name="com.city.test.presentation.city.CityFragment"
+            android:label="@string/app_name"
+            tools:layout="@layout/fragment_cities">
+
+        <action
+                android:id="@+id/action_fragment_city_to_fragment_map"
+                app:destination="@id/fragment_map"
+                app:popUpTo="@id/fragment_city" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragment_map"
+            android:name="com.city.test.presentation.map.MapFragment"
+            android:label="@string/app_name"
+            tools:layout="@layout/fragment_map">
+
+    </fragment>
+
+</navigation>
